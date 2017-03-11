@@ -1,0 +1,258 @@
+
+html, body{
+	font-family: Myriad Pro, Arial, Helvetica, FreeSans, "Liberation Sans", "Nimbus Sans L", sans-serif;
+	min-width: 320px;
+	margin: 0;
+	color: #333;
+}
+
+main, header, aside, nav{
+	display: block;
+}
+
+ul{
+	margin: 0;
+	padding: 0 10px;
+}
+
+header{
+    position: fixed;
+    z-index: 9;
+    right: 0;
+    left: 0;
+	-moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+nav ul{
+	background: #ea8b27;
+
+}
+
+nav ul li{
+	display: inline-block;
+    padding: 0px 10px;
+	margin: 8px 0;
+	border-left: 1px solid #fff;
+    line-height: 18px;
+}
+
+nav ul li:first-child {
+    border: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+aside{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    top: 35px;
+	padding:5px 10px;
+    overflow: auto;
+}
+aside ul{
+    list-style: none;
+    padding: 0 10px;
+}
+
+aside ul li {
+	padding: 10px 0 0px;
+}
+aside a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+aside a:hover{
+    color: #333;
+}
+
+main{
+    position: fixed;
+    left: 300px;
+    bottom: 0;
+    right: 0;
+    top: 70px;
+    overflow: auto;
+	background-color: #f4f5f6;
+}
+
+.breadcrumbs {
+    position: fixed;
+    left: 300px;
+    right: 0;
+    top: 35px;
+	background-color: #f4f5f6;
+}
+
+.breadcrumbs ul li{
+	display: inline-block;
+    margin: 5px 20px 5px 0;
+    line-height: 25px;
+    position: relative;
+}
+
+.breadcrumbs ul li:after{
+    content: '';
+	display: block;
+    width: 0px;
+    height: 0;
+    position: absolute;
+    border: 5px solid transparent;
+    border-left: 7px solid #555;
+    position: absolute;
+    right: -20px;
+    top: 60%;
+    margin-top: -8px;
+}
+
+.breadcrumbs ul li a{
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+}
+
+.breadcrumbs ul li a:hover{
+    color: #ea8b27;
+}
+
+.breadcrumbs ul li span {
+    color: #ea8b27;
+    font-weight: 500;
+}
+
+.breadcrumbs ul li:last-child:after{
+    content:"";
+	display:none;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content ul{
+    text-align: center;
+}
+
+.content ul li{
+    display: inline-block;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 2px;
+    margin: 24px 20px 0px auto;
+    background-color: white;
+    text-align: center;
+    color: #555;
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.content ul li:hover h3{
+	color:#333;
+}
+
+.content ul li .image-wrapper{
+    width: 250px;
+    height: 250px;
+	position: relative;
+	opacity: 0.9;
+}
+
+.content ul li:hover .image-wrapper{
+	opacity: 1;
+}
+
+.content ul li img{
+    max-width: 100%;
+    max-height: 100%;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content h3 {
+	margin: 20px 0 0;
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* icons */
+.icon-folder:before {
+    content: "\f07b";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+.icon-folder-open:before {
+    content: "\f115";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+.icon-plus-square:before {
+    content: "\f196";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+.icon-minus-square:before {
+    content: "\f147";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+.icon-check-square:before {
+    content: "\f046";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+.icon-caret-square-o-right:before {
+    content: "\f152";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+
+.icon-file-text:before {
+    content: "\f15c";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+@media (max-width: 640px){
+	
+	header{
+		position:static;
+	}
+	
+	aside{
+		position:static;
+		margin-bottom: 20px;
+	}
+	
+	.breadcrumbs{
+		position:static;
+	}
+	
+	main{
+		position:static;
+	}
+}
+
